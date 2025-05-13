@@ -420,7 +420,9 @@ class UniformAffineQuantizer(nn.Module):
         else:
             raise NotImplementedError()
         x_dequant = self.fake_quant(x, self.scale, self.round_zero_point, rtn=False)
-        x_rtn = self.fake_quant(x, self.scale, self.round_zero_point, rtn=True)
+        # error test
+        """x_rtn = self.fake_quant(x, self.scale, self.round_zero_point, rtn=True)"""
+        x_rtn = 1 ## error test
         return x_dequant, x, x_rtn
 
     def per_token_dynamic_calibration(self, x): 

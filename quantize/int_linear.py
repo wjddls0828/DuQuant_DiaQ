@@ -65,24 +65,26 @@ class QuantLinear(nn.Module):
 
             xlen=torch.norm(x, p=2, dim=-1, keepdim=True)
 
-            l2_dist_rtn = torch.norm(x - x_rtn, p=2, dim=-1)
+            ## error test
+            """l2_dist_rtn = torch.norm(x - x_rtn, p=2, dim=-1)
             rel_dist_rtn = l2_dist_rtn / (xlen.squeeze(-1) + 1e-8)
             cos_sim_rtn = F.cosine_similarity(x, x_rtn, dim=-1, eps=1e-8)
 
             self.stats["x_l2_rtn"].append(torch.mean(l2_dist_rtn.detach().cpu()).item())
             self.stats["x_relnorm_rtn"].append(torch.mean(rel_dist_rtn.detach().cpu()).item())
-            self.stats["x_cos_rtn"].append(torch.mean(cos_sim_rtn.detach().cpu()).item())
+            self.stats["x_cos_rtn"].append(torch.mean(cos_sim_rtn.detach().cpu()).item())"""
 
             # diaq
             xqlen=torch.norm(x_daq, p=2, dim=-1, keepdim=True).unsqueeze(0)
 
-            l2_dist_diaq = torch.norm(x - x_daq, p=2, dim=-1)
+            ## error test
+            """l2_dist_diaq = torch.norm(x - x_daq, p=2, dim=-1)
             rel_dist_diaq = l2_dist_diaq / (xlen.squeeze(-1) + 1e-8)
             cos_sim_diaq = F.cosine_similarity(x, x_daq, dim=-1, eps=1e-8)
 
             self.stats["x_l2_diaq"].append(torch.mean(l2_dist_diaq.detach().cpu()).item())
             self.stats["x_relnorm_diaq"].append(torch.mean(rel_dist_diaq.detach().cpu()).item())
-            self.stats["x_cos_diaq"].append(torch.mean(cos_sim_diaq.detach().cpu()).item())
+            self.stats["x_cos_diaq"].append(torch.mean(cos_sim_diaq.detach().cpu()).item())"""
 
         if self.use_temporary_parameter:
             weight = self.temp_weight
@@ -104,8 +106,8 @@ class QuantLinear(nn.Module):
             a = a.squeeze(0)
             out/=a
         
-        # diaq
-        wx = self.fwd_func(x, weight, bias, **self.fwd_kwargs)
+        ## error test
+        """wx = self.fwd_func(x, weight, bias, **self.fwd_kwargs)
         wx_q = out
         wx_rtn = self.fwd_func(x_rtn, weight, bias, **self.fwd_kwargs)
 
@@ -125,7 +127,7 @@ class QuantLinear(nn.Module):
 
         self.stats["wx_l2_rtn"].append(torch.mean(wx_l2_dist_rtn.detach().cpu()).item())
         self.stats["wx_relnorm_rtn"].append(torch.mean(wx_rel_dist_rtn.detach().cpu()).item())
-        self.stats["wx_cos_rtn"].append(torch.mean(wx_cos_sim_rtn.detach().cpu()).item())
+        self.stats["wx_cos_rtn"].append(torch.mean(wx_cos_sim_rtn.detach().cpu()).item())"""
 
         return out
 

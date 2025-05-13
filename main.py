@@ -458,7 +458,8 @@ def main():
         logger.info(time.time() - tick)
         print("end quantization")
     
-    quantlinear_layers = find_layers(lm.model, layers=[QuantLinear])
+    # error test
+    """quantlinear_layers = find_layers(lm.model, layers=[QuantLinear])
     from collections import defaultdict
     import re
     stats_by_type = defaultdict(lambda: defaultdict(list))
@@ -493,7 +494,7 @@ def main():
     mean_stats = {}
     for key, value_list in stats_all.items():
         mean_stats[key] = float(np.mean(value_list))
-    logger.info(mean_stats)
+    logger.info(mean_stats)"""
 
 
     evaluate(lm, args,logger)
