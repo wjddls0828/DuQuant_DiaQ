@@ -1,0 +1,42 @@
+[2025-05-02 21:57:43 root] (main.py 342): INFO Namespace(rts=0.0, my_file_name='rts_0.0_w2a2', model='/mnt/models/llama/llama-3/Llama-3-8B', cache_dir='./cache', output_dir='./log/Llama-3-8B_w2a2', save_dir=None, resume=None, calib_dataset='wikitext2', test_dataset='wikitext2', nsamples=128, batch_size=1, seed=2, tasks='arc_easy,arc_challenge,winogrande,boolq,piqa', eval_ppl=True, num_fewshot=0, wbits=2, abits=2, group_size=None, alpha=0.6, let_alpha=0.8, act_group_size=None, let_lr=0.005, smooth_lr=0.0001, lwc_lr=0.01, wd=0, epochs=0, smooth_epochs=0, smooth=True, let=False, lwc=True, aug_loss=False, symmetric=False, a_dynamic_method='per_token', w_dynamic_method='per_channel', limit=-1, multigpu=False, deactive_amp=False, attn_implementation='eager', net=None, act_scales=None, act_shifts=None, max_rotation_step=256, permutation_times=1, lac=0.9, swc=0.8, block_size=128, mmlu_data_dir='./mmlu/data', eval_mmlu=False, eval_mtbench=False, bench_name='mt_bench', question_begin=None, question_end=None, answer_file=None, max_new_token=1024, num_choices=1, num_gpus_per_model=1, num_gpus_total=1, max_gpu_memory=None, dtype=None, revision='main', quant_method='duquant')
+[2025-05-02 21:57:46 root] (main.py 428): INFO === start quantization ===
+[2025-05-02 21:57:46 root] (main.py 434): INFO load calibration from ./cache/dataloader_Llama_wikitext2_128.cache
+[2025-05-02 21:57:46 root] (duquant.py 45): INFO Starting ...
+[2025-05-02 21:57:47 root] (duquant.py 170): INFO === Start quantize layer 0 ===
+[2025-05-02 21:57:50 root] (duquant.py 170): INFO === Start quantize layer 1 ===
+[2025-05-02 21:57:52 root] (duquant.py 170): INFO === Start quantize layer 2 ===
+[2025-05-02 21:57:54 root] (duquant.py 170): INFO === Start quantize layer 3 ===
+[2025-05-02 21:57:56 root] (duquant.py 170): INFO === Start quantize layer 4 ===
+[2025-05-02 21:57:58 root] (duquant.py 170): INFO === Start quantize layer 5 ===
+[2025-05-02 21:58:00 root] (duquant.py 170): INFO === Start quantize layer 6 ===
+[2025-05-02 21:58:02 root] (duquant.py 170): INFO === Start quantize layer 7 ===
+[2025-05-02 21:58:04 root] (duquant.py 170): INFO === Start quantize layer 8 ===
+[2025-05-02 21:58:06 root] (duquant.py 170): INFO === Start quantize layer 9 ===
+[2025-05-02 21:58:08 root] (duquant.py 170): INFO === Start quantize layer 10 ===
+[2025-05-02 21:58:09 root] (duquant.py 170): INFO === Start quantize layer 11 ===
+[2025-05-02 21:58:11 root] (duquant.py 170): INFO === Start quantize layer 12 ===
+[2025-05-02 21:58:13 root] (duquant.py 170): INFO === Start quantize layer 13 ===
+[2025-05-02 21:58:15 root] (duquant.py 170): INFO === Start quantize layer 14 ===
+[2025-05-02 21:58:17 root] (duquant.py 170): INFO === Start quantize layer 15 ===
+[2025-05-02 21:58:19 root] (duquant.py 170): INFO === Start quantize layer 16 ===
+[2025-05-02 21:58:22 root] (duquant.py 170): INFO === Start quantize layer 17 ===
+[2025-05-02 21:58:24 root] (duquant.py 170): INFO === Start quantize layer 18 ===
+[2025-05-02 21:58:26 root] (duquant.py 170): INFO === Start quantize layer 19 ===
+[2025-05-02 21:58:28 root] (duquant.py 170): INFO === Start quantize layer 20 ===
+[2025-05-02 21:58:31 root] (duquant.py 170): INFO === Start quantize layer 21 ===
+[2025-05-02 21:58:33 root] (duquant.py 170): INFO === Start quantize layer 22 ===
+[2025-05-02 21:58:35 root] (duquant.py 170): INFO === Start quantize layer 23 ===
+[2025-05-02 21:58:38 root] (duquant.py 170): INFO === Start quantize layer 24 ===
+[2025-05-02 21:58:40 root] (duquant.py 170): INFO === Start quantize layer 25 ===
+[2025-05-02 21:58:42 root] (duquant.py 170): INFO === Start quantize layer 26 ===
+[2025-05-02 21:58:45 root] (duquant.py 170): INFO === Start quantize layer 27 ===
+[2025-05-02 21:58:47 root] (duquant.py 170): INFO === Start quantize layer 28 ===
+[2025-05-02 21:58:49 root] (duquant.py 170): INFO === Start quantize layer 29 ===
+[2025-05-02 21:58:52 root] (duquant.py 170): INFO === Start quantize layer 30 ===
+[2025-05-02 21:58:54 root] (duquant.py 170): INFO === Start quantize layer 31 ===
+[2025-05-02 21:58:56 root] (main.py 457): INFO 70.5828709602356
+[2025-05-02 21:59:03 root] (main.py 102): INFO load calibration from ./cache/testloader_Llama_wikitext2_all.cache
+[2025-05-02 22:00:24 root] (main.py 140): INFO wikitext2 : 885124.25
+[2025-05-02 22:00:24 root] (main.py 102): INFO load calibration from ./cache/testloader_Llama_c4_all.cache
+[2025-05-02 22:02:51 root] (main.py 140): INFO c4 : 902387.3125
+[2025-05-02 23:23:33 root] (main.py 161): INFO {'wikitext2': 885124.25, 'c4': 902387.3125, 'results': {'arc_easy': {'acc': 0.2542087542087542, 'acc_stderr': 0.008934537681141552, 'acc_norm': 0.255050505050505, 'acc_norm_stderr': 0.008944265906130714}, 'piqa': {'acc': 0.5054406964091404, 'acc_stderr': 0.011665133500637054, 'acc_norm': 0.5043525571273123, 'acc_norm_stderr': 0.011665382144642394}, 'boolq': {'acc': 0.5073394495412844, 'acc_stderr': 0.008744112776801328}, 'arc_challenge': {'acc': 0.22013651877133106, 'acc_stderr': 0.012108124883460985, 'acc_norm': 0.2636518771331058, 'acc_norm_stderr': 0.012875929151297061}, 'winogrande': {'acc': np.float64(0.4988161010260458), 'acc_stderr': 0.014052446290529019}}, 'versions': {'arc_easy': 0, 'piqa': 0, 'boolq': 1, 'arc_challenge': 0, 'winogrande': 0}, 'config': {'model': <models.LMClass.LMClass object at 0x7f9ba7597c10>, 'model_args': None, 'num_fewshot': 0, 'limit': None, 'bootstrap_iters': 100000, 'description_dict': None}}
