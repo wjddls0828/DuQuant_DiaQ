@@ -16,7 +16,7 @@ def round_ste(x: torch.Tensor):
     """
     return (x.round() - x).detach() + x
 
-def rts_scale(x, scale, rts):
+def rts_scale_old(x, scale, rts):
     qlev = scale
     xlen = torch.norm(x, p=2, dim=-1, keepdim=True)
     s = qlev / xlen
@@ -43,6 +43,32 @@ def rts_scale(x, scale, rts):
         lenc = torch.sqrt(lc2)
         xsim = torch.where((lenf/(lenf+lenc)) > ((x-xf)/scale), xf, xc)
 
+    return xsim
+
+def rts_scale(x, scale, rts):
+    qlev = scale
+    xlen = torch.norm(x, p=2, dim=-1, keepdim=True)
+    s = qlev / xlen
+    unitx = s * x
+    x += unitx * rts
+    xf = torch.floor(x / scale) * scale
+    xc = torch.ceil(x / scale) * scale
+    l2 = torch.sum(x*x, dim=-1, keepdim=True) - x*x
+    lf2 = l2 + xf*xf
+    lc2 = l2 + xc*xc
+    lenf = torch.sqrt(lf2)
+    lenc = torch.sqrt(lc2)
+    xsim = torch.where((lenf/(lenf+lenc)) > ((x-xf)/scale), xf, xc)
+    for i in range(24):
+        l2 = torch.sum(xsim*xsim, dim=-1, keepdim=True) - xsim*xsim
+        lf2 = l2 + xf*xf
+        lc2 = l2 + xc*xc
+        lenf = torch.sqrt(lf2)
+        lenc = torch.sqrt(lc2)
+        dot = torch.sum(xsim*x, dim=-1, keepdim=True) - xsim*x
+        dotf = dot + xf*x
+        dotc = dot + xc*x
+        xsim = torch.where((dotf/lenf) > (dotc/lenc), xf, xc)
     return xsim
 
 class UniformAffineQuantizer(nn.Module):
@@ -421,7 +447,7 @@ class UniformAffineQuantizer(nn.Module):
             raise NotImplementedError()
         x_dequant = self.fake_quant(x, self.scale, self.round_zero_point, rtn=False)
         # error test
-        """x_rtn = self.fake_quant(x, self.scale, self.round_zero_point, rtn=True)"""
+        # x_rtn = self.fake_quant(x, self.scale, self.round_zero_point, rtn=True)
         x_rtn = 1 ## error test
         return x_dequant, x, x_rtn
 

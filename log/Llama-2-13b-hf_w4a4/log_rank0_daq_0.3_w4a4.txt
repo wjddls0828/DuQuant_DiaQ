@@ -1,0 +1,59 @@
+[2025-05-14 13:25:56 root] (main.py 345): INFO Namespace(rts=0.3, my_file_name='daq_0.3_w4a4', model='/mnt/models/llama/llama-2/Llama-2-13b-hf', cache_dir='./cache', output_dir='./log/Llama-2-13b-hf_w4a4', save_dir=None, resume=None, calib_dataset='wikitext2', test_dataset='wikitext2', nsamples=128, batch_size=1, seed=2, tasks='arc_easy,arc_challenge,winogrande,boolq,piqa', eval_ppl=True, num_fewshot=0, wbits=4, abits=4, group_size=None, alpha=0.6, let_alpha=0.8, act_group_size=None, let_lr=0.005, smooth_lr=0.0001, lwc_lr=0.01, wd=0, epochs=0, smooth_epochs=0, smooth=True, let=False, lwc=True, aug_loss=False, symmetric=False, a_dynamic_method='per_token', w_dynamic_method='per_channel', limit=-1, multigpu=False, deactive_amp=False, attn_implementation='eager', net=None, act_scales=None, act_shifts=None, max_rotation_step=256, permutation_times=1, lac=0.9, swc=0.8, block_size=128, mmlu_data_dir='./mmlu/data', eval_mmlu=False, eval_mtbench=False, bench_name='mt_bench', question_begin=None, question_end=None, answer_file=None, max_new_token=1024, num_choices=1, num_gpus_per_model=1, num_gpus_total=1, max_gpu_memory=None, dtype=None, revision='main', quant_method='duquant')
+[2025-05-14 13:25:57 root] (main.py 429): INFO === start quantization ===
+[2025-05-14 13:25:57 root] (main.py 435): INFO load calibration from ./cache/dataloader_Llama_wikitext2_128.cache
+[2025-05-14 13:25:57 root] (duquant.py 45): INFO Starting ...
+[2025-05-14 15:25:50 root] (main.py 345): INFO Namespace(rts=0.3, my_file_name='daq_0.3_w4a4', model='/mnt/models/llama/llama-2/Llama-2-13b-hf', cache_dir='./cache', output_dir='./log/Llama-2-13b-hf_w4a4', save_dir=None, resume=None, calib_dataset='wikitext2', test_dataset='wikitext2', nsamples=128, batch_size=1, seed=2, tasks='arc_easy,arc_challenge,winogrande,boolq,piqa', eval_ppl=True, num_fewshot=0, wbits=4, abits=4, group_size=None, alpha=0.6, let_alpha=0.8, act_group_size=None, let_lr=0.005, smooth_lr=0.0001, lwc_lr=0.01, wd=0, epochs=0, smooth_epochs=0, smooth=True, let=False, lwc=True, aug_loss=False, symmetric=False, a_dynamic_method='per_token', w_dynamic_method='per_channel', limit=-1, multigpu=False, deactive_amp=False, attn_implementation='eager', net=None, act_scales=None, act_shifts=None, max_rotation_step=256, permutation_times=1, lac=0.9, swc=0.8, block_size=128, mmlu_data_dir='./mmlu/data', eval_mmlu=False, eval_mtbench=False, bench_name='mt_bench', question_begin=None, question_end=None, answer_file=None, max_new_token=1024, num_choices=1, num_gpus_per_model=1, num_gpus_total=1, max_gpu_memory=None, dtype=None, revision='main', quant_method='duquant')
+[2025-05-14 15:25:51 root] (main.py 429): INFO === start quantization ===
+[2025-05-14 15:25:51 root] (main.py 435): INFO load calibration from ./cache/dataloader_Llama_wikitext2_128.cache
+[2025-05-14 15:25:51 root] (duquant.py 45): INFO Starting ...
+[2025-05-14 15:25:52 root] (duquant.py 171): INFO === Start quantize layer 0 ===
+[2025-05-14 16:18:25 root] (main.py 345): INFO Namespace(rts=0.3, my_file_name='daq_0.3_w4a4', model='/mnt/models/llama/llama-2/Llama-2-13b-hf', cache_dir='./cache', output_dir='./log/Llama-2-13b-hf_w4a4', save_dir=None, resume=None, calib_dataset='wikitext2', test_dataset='wikitext2', nsamples=128, batch_size=1, seed=2, tasks='arc_easy,arc_challenge,winogrande,boolq,piqa', eval_ppl=True, num_fewshot=0, wbits=4, abits=4, group_size=None, alpha=0.6, let_alpha=0.8, act_group_size=None, let_lr=0.005, smooth_lr=0.0001, lwc_lr=0.01, wd=0, epochs=0, smooth_epochs=0, smooth=True, let=False, lwc=True, aug_loss=False, symmetric=False, a_dynamic_method='per_token', w_dynamic_method='per_channel', limit=-1, multigpu=False, deactive_amp=False, attn_implementation='eager', net=None, act_scales=None, act_shifts=None, max_rotation_step=256, permutation_times=1, lac=0.9, swc=0.8, block_size=128, mmlu_data_dir='./mmlu/data', eval_mmlu=False, eval_mtbench=False, bench_name='mt_bench', question_begin=None, question_end=None, answer_file=None, max_new_token=1024, num_choices=1, num_gpus_per_model=1, num_gpus_total=1, max_gpu_memory=None, dtype=None, revision='main', quant_method='duquant')
+[2025-05-14 16:18:26 root] (main.py 429): INFO === start quantization ===
+[2025-05-14 16:18:26 root] (main.py 435): INFO load calibration from ./cache/dataloader_Llama_wikitext2_128.cache
+[2025-05-14 16:18:26 root] (duquant.py 45): INFO Starting ...
+[2025-05-14 16:18:28 root] (duquant.py 171): INFO === Start quantize layer 0 ===
+[2025-05-14 16:18:32 root] (duquant.py 171): INFO === Start quantize layer 1 ===
+[2025-05-14 16:18:34 root] (duquant.py 171): INFO === Start quantize layer 2 ===
+[2025-05-14 16:18:37 root] (duquant.py 171): INFO === Start quantize layer 3 ===
+[2025-05-14 16:18:39 root] (duquant.py 171): INFO === Start quantize layer 4 ===
+[2025-05-14 16:18:42 root] (duquant.py 171): INFO === Start quantize layer 5 ===
+[2025-05-14 16:18:44 root] (duquant.py 171): INFO === Start quantize layer 6 ===
+[2025-05-14 16:18:46 root] (duquant.py 171): INFO === Start quantize layer 7 ===
+[2025-05-14 16:18:49 root] (duquant.py 171): INFO === Start quantize layer 8 ===
+[2025-05-14 16:18:51 root] (duquant.py 171): INFO === Start quantize layer 9 ===
+[2025-05-14 16:18:54 root] (duquant.py 171): INFO === Start quantize layer 10 ===
+[2025-05-14 16:18:56 root] (duquant.py 171): INFO === Start quantize layer 11 ===
+[2025-05-14 16:18:59 root] (duquant.py 171): INFO === Start quantize layer 12 ===
+[2025-05-14 16:19:01 root] (duquant.py 171): INFO === Start quantize layer 13 ===
+[2025-05-14 16:19:03 root] (duquant.py 171): INFO === Start quantize layer 14 ===
+[2025-05-14 16:19:06 root] (duquant.py 171): INFO === Start quantize layer 15 ===
+[2025-05-14 16:19:08 root] (duquant.py 171): INFO === Start quantize layer 16 ===
+[2025-05-14 16:19:11 root] (duquant.py 171): INFO === Start quantize layer 17 ===
+[2025-05-14 16:19:13 root] (duquant.py 171): INFO === Start quantize layer 18 ===
+[2025-05-14 16:19:15 root] (duquant.py 171): INFO === Start quantize layer 19 ===
+[2025-05-14 16:19:18 root] (duquant.py 171): INFO === Start quantize layer 20 ===
+[2025-05-14 16:19:20 root] (duquant.py 171): INFO === Start quantize layer 21 ===
+[2025-05-14 16:19:23 root] (duquant.py 171): INFO === Start quantize layer 22 ===
+[2025-05-14 16:19:25 root] (duquant.py 171): INFO === Start quantize layer 23 ===
+[2025-05-14 16:19:28 root] (duquant.py 171): INFO === Start quantize layer 24 ===
+[2025-05-14 16:19:30 root] (duquant.py 171): INFO === Start quantize layer 25 ===
+[2025-05-14 16:19:32 root] (duquant.py 171): INFO === Start quantize layer 26 ===
+[2025-05-14 16:19:35 root] (duquant.py 171): INFO === Start quantize layer 27 ===
+[2025-05-14 16:19:37 root] (duquant.py 171): INFO === Start quantize layer 28 ===
+[2025-05-14 16:19:39 root] (duquant.py 171): INFO === Start quantize layer 29 ===
+[2025-05-14 16:19:42 root] (duquant.py 171): INFO === Start quantize layer 30 ===
+[2025-05-14 16:19:44 root] (duquant.py 171): INFO === Start quantize layer 31 ===
+[2025-05-14 16:19:47 root] (duquant.py 171): INFO === Start quantize layer 32 ===
+[2025-05-14 16:19:49 root] (duquant.py 171): INFO === Start quantize layer 33 ===
+[2025-05-14 16:19:52 root] (duquant.py 171): INFO === Start quantize layer 34 ===
+[2025-05-14 16:19:54 root] (duquant.py 171): INFO === Start quantize layer 35 ===
+[2025-05-14 16:19:56 root] (duquant.py 171): INFO === Start quantize layer 36 ===
+[2025-05-14 16:19:59 root] (duquant.py 171): INFO === Start quantize layer 37 ===
+[2025-05-14 16:20:01 root] (duquant.py 171): INFO === Start quantize layer 38 ===
+[2025-05-14 16:20:04 root] (duquant.py 171): INFO === Start quantize layer 39 ===
+[2025-05-14 16:20:06 root] (main.py 458): INFO 100.5588755607605
+[2025-05-14 16:20:26 root] (main.py 105): INFO load calibration from ./cache/testloader_Llama_wikitext2_all.cache
+[2025-05-14 16:28:13 root] (main.py 143): INFO wikitext2 : 5.3585333824157715
+[2025-05-14 16:28:13 root] (main.py 105): INFO load calibration from ./cache/testloader_Llama_c4_all.cache
+[2025-05-14 16:40:14 root] (main.py 143): INFO c4 : 6.873401165008545
+[2025-05-14 21:44:29 root] (main.py 164): INFO {'wikitext2': 5.3585333824157715, 'c4': 6.873401165008545, 'results': {'winogrande': {'acc': 0.664561957379637, 'acc_stderr': 0.013269575904851418}, 'arc_challenge': {'acc': 0.40273037542662116, 'acc_stderr': 0.01433223630679014, 'acc_norm': 0.4180887372013652, 'acc_norm_stderr': 0.014413988396996081}, 'arc_easy': {'acc': 0.7045454545454546, 'acc_stderr': 0.009361987126556457, 'acc_norm': 0.5576599326599326, 'acc_norm_stderr': 0.010191334444220851}, 'boolq': {'acc': 0.6960244648318042, 'acc_stderr': 0.00804496405691736}, 'piqa': {'acc': 0.7736670293797606, 'acc_stderr': 0.009763294246879424, 'acc_norm': 0.7747551686615887, 'acc_norm_stderr': 0.00974664347103214}}, 'versions': {'winogrande': 0, 'arc_challenge': 0, 'arc_easy': 0, 'boolq': 1, 'piqa': 0}, 'config': {'model': <models.LMClass.LMClass object at 0x7fe93c2fa050>, 'model_args': None, 'num_fewshot': 0, 'limit': None, 'bootstrap_iters': 100000, 'description_dict': None}}
